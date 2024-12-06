@@ -53,7 +53,7 @@ const Shorterlink = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(data.link.substring(0,21) !== frontendUrl){
+    if(data.link.substring(0,31) !== frontendUrl){
       data.userName=user.name
       data.random = randomString(8).trim();
       const dataRespose = await fetch(SummaryApi.uploadShorterLink.url, {
