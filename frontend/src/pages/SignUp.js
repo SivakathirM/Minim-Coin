@@ -23,7 +23,7 @@ const SignUp = () => {
   const otpBoxReference=useRef([])
 
   const [data, setData] = useState({
-    email: "@gmail.com",
+    email: "",
     phone:"",
     password: "",
     name: "",
