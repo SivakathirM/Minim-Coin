@@ -10,6 +10,7 @@ import Cards from 'react-credit-cards-2';
 import visa from '../assest/withdraw/visa.jpg'
 import SummaryApi from "../common";
 import moment from 'moment'
+import {useNavigate } from "react-router-dom";
 
 const Withdraw = () => {
     const [data,setData]=useState([])
@@ -20,6 +21,7 @@ const Withdraw = () => {
     const [withdrawAmount,setWithdrawAmount]=useState('')
     const withdraw=useRef();
     const history=useRef();
+    const navigate = useNavigate();
     const user = useSelector((state) => state?.user?.user);
     const [upiData, setUpiData] = useState({
         withdrawMethod:'upi',
@@ -67,6 +69,7 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
+          navigate("/");  
           window.location.reload();
         }
         if (dataApi.error) {
@@ -90,6 +93,7 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
+            navigate("/")
           window.location.reload();
         }
         if (dataApi.error) {
@@ -113,6 +117,7 @@ const Withdraw = () => {
                 withdraw.current.className="hidden"
                 history.current.className=""
                 fetchHistory();
+                navigate("/")
                 window.location.reload();
             }
             if (dataApi.error) {
@@ -136,6 +141,7 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
+            navigate("/")
           window.location.reload();
         }
         if (dataApi.error) {
