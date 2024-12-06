@@ -185,7 +185,7 @@ const Shorterlink = () => {
               </button>
               
             </div>
-            <div className="absolute top-11 right-[36px] md:relative md:top-0 md:right-0.5 -mt-1 md:-mt-0.5">
+            <div className="absolute top-11 right-[38px] md:relative md:top-0 md:right-0.5 -mt-1 md:-mt-0.5">
               <Link to={"/shorter/" +data.random} ><button className="h-8 md:h-14 w-12 md:w-40 ml-0.5 text-[10px] md:text-lg text-white bg-orange-600 border border-red-400 hover:bg-orange-700">Open</button></Link>
               <button className="h-8 md:h-14 w-12 md:w-40 ml-0.5 text-[10px] md:text-lg text-white bg-orange-600 border border-red-400 hover:bg-orange-700" onClick={handleShare}>Share</button>
               <button className="h-8 md:h-14 w-12 md:w-40 ml-0.5 text-[10px] md:text-lg text-white bg-orange-600 border border-red-400 hover:bg-orange-700" onClick={handleQRCode}>QR Code</button>
