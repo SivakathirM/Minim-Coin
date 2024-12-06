@@ -217,7 +217,7 @@ const Shorterlink = () => {
         } 
         {/*QR Code Button */}
         {qrBtn && (
-          <div className="w-1/4 md:w-1/4 absolute left-[196px] md:left-[332px] h-[30%] md:h-2/4 border border-black">
+          <div className="w-1/4 md:w-1/4 absolute left-[196px] md:left-[332px] h-[25%] md:h-2/4 border border-black">
             <div className="bg-white">
               <QRCode
                 size={150}
