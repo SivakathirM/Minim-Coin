@@ -10,7 +10,7 @@ import Context from "../context";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [data, setData] = useState({
-    email: "@gmail.com",
+    email: "",
     password: "",
   });
 
