@@ -3,9 +3,11 @@ import displayINRCurrency from "../helpers/displayCurrency"
 import { useSelector } from "react-redux";
 import SummaryApi from "../common/index";
 import { toast } from "react-toastify";
+import {useNavigate } from "react-router-dom";
 
 const Wallet = () => {
   const user = useSelector((state) => state?.user?.user);
+  const navigate = useNavigate();
   
   const [data,setData]=useState({
       phone:'',
@@ -35,6 +37,7 @@ const Wallet = () => {
     const responseData=await response.json()
     if (responseData.success) {
       toast.success(responseData?.message);
+      navigate("/")
       window.location.reload();
     }
     if (responseData.error) {
