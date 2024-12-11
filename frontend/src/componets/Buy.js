@@ -118,7 +118,7 @@ const Buy = () => {
 
     if (response.success) {
       toast.success(response.message)
-      navigate("/");
+      navigate("/wallet");
       window.location.reload();
     }else{
       toast.error(response.message)
