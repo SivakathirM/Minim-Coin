@@ -69,7 +69,6 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
-          navigate("/");  
           window.location.reload();
         }
         if (dataApi.error) {
@@ -93,7 +92,6 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
-            navigate("/")
           window.location.reload();
         }
         if (dataApi.error) {
@@ -117,7 +115,6 @@ const Withdraw = () => {
                 withdraw.current.className="hidden"
                 history.current.className=""
                 fetchHistory();
-                navigate("/")
                 window.location.reload();
             }
             if (dataApi.error) {
@@ -141,7 +138,6 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
-            navigate("/")
           window.location.reload();
         }
         if (dataApi.error) {
