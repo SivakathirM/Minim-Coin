@@ -132,7 +132,7 @@ const Shorterlink = () => {
                 value={data.category}
                 name="coin"
                 onChange={handleOnChange}
-                className="h-10 md:h-14 w-20 md:w-35 text-lg "
+                className="h-10 md:h-14 w-20 md:w-35 text-lg outline-none"
                 required
               >
                 <option value="0.15">{displayINRCurrency(0.15)}</option>
