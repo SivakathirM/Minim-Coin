@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import displayINRCurrency from "../helpers/displayCurrency"
 import upi from "../assest/withdraw/upi.jpg"
 import card from "../assest/withdraw/card.png"
@@ -11,6 +11,7 @@ import visa from '../assest/withdraw/visa.jpg'
 import SummaryApi from "../common";
 import moment from 'moment'
 import {useNavigate } from "react-router-dom";
+import Context from "../context";
 
 const Withdraw = () => {
     const [data,setData]=useState([])
@@ -22,6 +23,7 @@ const Withdraw = () => {
     const withdraw=useRef();
     const history=useRef();
     const navigate = useNavigate();
+    const { fetchUserDetails} = useContext(Context);
     const user = useSelector((state) => state?.user?.user);
     const [upiData, setUpiData] = useState({
         withdrawMethod:'upi',
@@ -69,7 +71,7 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
-          window.location.reload();
+            fetchUserDetails()
         }
         if (dataApi.error) {
             toast.error(dataApi.message);
@@ -92,7 +94,7 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
-          window.location.reload();
+            fetchUserDetails()
         }
         if (dataApi.error) {
             toast.error(dataApi.message);
@@ -115,7 +117,7 @@ const Withdraw = () => {
                 withdraw.current.className="hidden"
                 history.current.className=""
                 fetchHistory();
-                window.location.reload();
+                fetchUserDetails()
             }
             if (dataApi.error) {
                 toast.error(dataApi.message);
@@ -138,7 +140,7 @@ const Withdraw = () => {
           history.current.className=""
           withdraw.current.className="hidden"
           fetchHistory();
-          window.location.reload();
+          fetchUserDetails()
         }
         if (dataApi.error) {
             toast.error(dataApi.message);
