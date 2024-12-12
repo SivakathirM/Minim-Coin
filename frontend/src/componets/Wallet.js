@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext,useState } from 'react'
 import displayINRCurrency from "../helpers/displayCurrency"
 import { useSelector } from "react-redux";
 import SummaryApi from "../common/index";
 import { toast } from "react-toastify";
+import Context from "../context";
 
 const Wallet = () => {
+  const { fetchUserDetails} = useContext(Context);
   const user = useSelector((state) => state?.user?.user);
   
   const [data,setData]=useState({
@@ -35,7 +37,7 @@ const Wallet = () => {
     const responseData=await response.json()
     if (responseData.success) {
       toast.success(responseData?.message);
-      window.location.reload();
+      fetchUserDetails()
     }
     if (responseData.error) {
       toast.error(responseData?.message)
