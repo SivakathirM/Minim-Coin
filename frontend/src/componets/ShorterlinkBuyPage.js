@@ -1,4 +1,4 @@
-import React, { useEffect, useRef,useState } from 'react'
+import React, {useContext, useEffect, useRef,useState } from 'react'
 import { useParams} from 'react-router-dom'
 import SummaryApi from '../common'
 import displayINRCurrency from "../helpers/displayCurrency"
@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {FacebookShareButton,TelegramShareButton,TwitterShareButton,WhatsappShareButton,} from"react-share";
 import {FacebookIcon,TelegramIcon, TwitterIcon,WhatsappIcon} from "react-share";
 import QRCode from 'react-qr-code'
+import Context from "../context";
 
 const ShorterlinkBuyPage =  () => {
   const [data,setData]=useState({})
@@ -19,6 +20,7 @@ const ShorterlinkBuyPage =  () => {
   const navigate = useNavigate();
   const formElement1 = useRef();
   const formElement2 = useRef();
+  const { fetchUserDetails} = useContext(Context);
   const user = useSelector((state) => state?.user?.user); 
   const fetchShorterLink=async()=>{
     const response= await fetch(SummaryApi.getShorterLink.url,{
@@ -56,6 +58,7 @@ const ShorterlinkBuyPage =  () => {
         formElement1.current.className="hidden"
         formElement2.current.className="relative"
         setPay(true)
+        fetchUserDetails()
       }
       if (responseData.error) {
         toast.error(responseData?.message)
