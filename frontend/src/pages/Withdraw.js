@@ -257,7 +257,7 @@ const Withdraw = () => {
         {/* withdraw form */}
         <div className='mt-2' ref={withdraw}>
             <label htmlFor="" className=''>Select Withdraw Method : </label>
-            <button className='inline-block mb-2 ml-[50px] md:ml-[97px] lg:ml-[199px] bg-gray-700 text-white w-18 px-2' onClick={handleOnHistory}>History</button>
+            <button className='inline-block mb-2 ml-[60px] md:ml-[97px] lg:ml-[199px] bg-gray-700 text-white w-18 px-2' onClick={handleOnHistory}>History</button>
             <div className='flex justify-around mx-1'>
                 <div className='border border-black px-1 md:px-2 lg:px-4 py-1 cursor-pointer'  onClick={()=>handlePaymentSystem('upi')}> 
                     <img src={upi} alt="upi" width={45} height={40} className='-mt-0.5 mx-auto'/>
@@ -583,7 +583,7 @@ const Withdraw = () => {
         {/* history */}
         <div className='hidden' ref={history}>
             <h2 className='inline-block'>Withdraw History</h2>
-            <button className='inline-block mt-2 mb-2 ml-[97px] md:ml-[138px] lg:ml-[245px] bg-gray-900 text-white w-18 px-2' onClick={handleOnWithdraw}>Withdraw</button> 
+            <button className='inline-block mt-2 mb-2 ml-[107px] md:ml-[138px] lg:ml-[245px] bg-gray-900 text-white w-18 px-2' onClick={handleOnWithdraw}>Withdraw</button> 
             
             { data[0] ? (
             <table className="w-full h-auto userTable table-fixed borders mt-1 md:mt-2">
