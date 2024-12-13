@@ -38,6 +38,10 @@ const Wallet = () => {
     if (responseData.success) {
       toast.success(responseData?.message);
       fetchUserDetails()
+      setData({
+        phone:'',
+        coin:''
+      })
     }
     if (responseData.error) {
       toast.error(responseData?.message)
