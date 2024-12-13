@@ -191,7 +191,7 @@ const Link = () => {
                           <label htmlFor="what" className="cursor-pointer">Whatsapp</label>
                           </WhatsappShareButton>
                         </div>  
-                        <div id={`qrBtn${index}`} className="hidden w-3/12 md:w-[10%] absolute left-[70%] md:left-[83%] lg:left-[81.5%] h-[15.7%] md:h-[11%] lg:h-[21.3%] border mt-12 md:mt-8 border-black">
+                        <div id={`qrBtn${index}`} className="hidden w-2/12 md:w-[10%] absolute left-[70%] md:left-[83%] lg:left-[81.5%] h-[15.7%] md:h-[11%] lg:h-[21.3%] border mt-12 md:mt-8 border-black">
                           <div className="bg-white">
                           <QRCode
                               size={120}
