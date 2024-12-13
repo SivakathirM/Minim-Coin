@@ -1,14 +1,16 @@
 import React from 'react'
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {load} from '@cashfreepayments/cashfree-js';
 import SummaryApi from "../common";
 import displayINRCurrency from "../helpers/displayCurrency";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Context from "../context";
 
 const Buy = () => {
   const navigate = useNavigate();
+  const { fetchUserDetails} = useContext(Context);
   const user = useSelector((state) => state?.user?.user);
   const [planPrice,setPlanPrice]=useState(99.00)   
   const [planCoin,setPlanCoin]=useState(100.00)   
@@ -118,8 +120,8 @@ const Buy = () => {
 
     if (response.success) {
       toast.success(response.message)
+      fetchUserDetails()
       navigate("/wallet");
-      window.location.reload();
     }else{
       toast.error(response.message)
     }    
