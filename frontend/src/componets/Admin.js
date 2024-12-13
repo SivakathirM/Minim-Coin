@@ -161,7 +161,7 @@ const Admin = () => {
             ? loadingList.map((item, index) => {
                 return (
                   <tr key={index + item}>
-                    <td className="animate-pulse opacity-20 bg-slate-200 text-white w-10 h-[56.2px] md:h-[27px]"></td>
+                    <td className="animate-pulse opacity-20 bg-slate-200 text-white w-10 h-[56.3px] md:h-[27px]"></td>
                     <td role="status">
                       <svg
                         aria-hidden="true"
