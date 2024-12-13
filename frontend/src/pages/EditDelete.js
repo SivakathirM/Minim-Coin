@@ -196,7 +196,7 @@ const EditDelete = () => {
                     <td
                       className="overflow-hidden text-sm md:text-md lg:text-lg"
                       id="linkTable"
-                    >{`${frontendUrl}/shorter/${item.random}`}</td>
+                    >{`${frontendUrl}/.../${item.random}`}</td>
                     <td>{item.coin}</td>
                     <td>
                       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-1 md:mx-1 shareMainBtn">  
