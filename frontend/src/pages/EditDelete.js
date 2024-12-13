@@ -164,7 +164,7 @@ const EditDelete = () => {
             ? loadingList.map((item, index) => {
                 return (
                   <tr key={index + item}>
-                    <td className="animate-pulse opacity-20 bg-slate-200 text-white w-10 h-[51px] md:h-[39px]"></td>
+                    <td className="animate-pulse opacity-20 bg-slate-200 text-white w-10 h-[75px] md:h-[39px]"></td>
                     <td role="status">
                       <svg
                         aria-hidden="true"
