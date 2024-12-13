@@ -108,6 +108,18 @@ const Shorterlink = () => {
     }
   }
 
+  const handleAnotherLink=()=>{
+    formElement1.current.className="mt-12 md:mt-20"
+    formElement2.current.className="hidden relative mt-12 md:mt-[81px] md:mr-[122px]"
+    setData({
+      userName:'admin',
+      userEmail: "",
+      link: "",
+      coin: "0.15",
+      random: "",
+    })
+  }
+
   return (
     <div className="h-[52vh] md:h-[320px] w-full bg-[#73787F] flex justify-center">
       {/* upolad link */}
@@ -189,7 +201,7 @@ const Shorterlink = () => {
               <Link to={"/shorter/" +data.random} ><button className="h-8 md:h-14 w-12 md:w-40 ml-0.5 text-[10px] md:text-lg text-white bg-orange-600 border border-red-400 hover:bg-orange-700">Open</button></Link>
               <button className="h-8 md:h-14 w-12 md:w-40 ml-0.5 text-[10px] md:text-lg text-white bg-orange-600 border border-red-400 hover:bg-orange-700" onClick={handleShare}>Share</button>
               <button className="h-8 md:h-14 w-12 md:w-40 ml-0.5 text-[10px] md:text-lg text-white bg-orange-600 border border-red-400 hover:bg-orange-700" onClick={handleQRCode}>QR Code</button>
-              <button className="h-8 md:h-14 w-12 md:w-40 ml-0.5 text-[10px] md:text-lg text-white bg-orange-600 border border-red-400 hover:bg-orange-700" onClick={()=>{window.location.reload()}}>Another</button>
+              <button className="h-8 md:h-14 w-12 md:w-40 ml-0.5 text-[10px] md:text-lg text-white bg-orange-600 border border-red-400 hover:bg-orange-700" onClick={handleAnotherLink}>Another</button>
             </div>
           </div>
         </form>
