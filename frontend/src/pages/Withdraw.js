@@ -72,6 +72,14 @@ const Withdraw = () => {
           withdraw.current.className="hidden"
           fetchHistory();
             fetchUserDetails()
+          setUpiData({
+            withdrawMethod:'upi',
+            paymentName:'GPay',
+            upiId: "",
+            phoneNumber: "",
+            upiUserName: "",
+            });
+            setWithdrawAmount('')  
         }
         if (dataApi.error) {
             toast.error(dataApi.message);
@@ -95,6 +103,14 @@ const Withdraw = () => {
           withdraw.current.className="hidden"
           fetchHistory();
             fetchUserDetails()
+          setCardData({
+            withdrawMethod:'card',
+            cardNumber:'',
+            cardUserName: "",
+            expireDate: "",
+            cvc: "",
+          });
+          setWithdrawAmount('')  
         }
         if (dataApi.error) {
             toast.error(dataApi.message);
@@ -118,6 +134,15 @@ const Withdraw = () => {
                 history.current.className=""
                 fetchHistory();
                 fetchUserDetails()
+                setBankData({
+                    withdrawMethod:'bank',
+                    accountNumber:'',
+                    accountName: "",
+                    ifsc: "",
+                    cif: "",
+                    micr: "",
+                });
+                setWithdrawAmount('')
             }
             if (dataApi.error) {
                 toast.error(dataApi.message);
@@ -141,6 +166,13 @@ const Withdraw = () => {
           withdraw.current.className="hidden"
           fetchHistory();
           fetchUserDetails()
+          setWalletData({
+            withdrawMethod:'wallet',
+            paymentNameWallet:'Gpay',
+            walletNumber: "",
+            walletName: ""
+            });
+          setWithdrawAmount('')  
         }
         if (dataApi.error) {
             toast.error(dataApi.message);
