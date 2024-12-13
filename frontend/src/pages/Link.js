@@ -169,10 +169,10 @@ const Link = () => {
                     >{`${frontendUrl}/shorter/${item.random}`}</td>
                     <td>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mx-1 shareMainBtn">  
-                        <button className="h-5 md:h-8 rounded-md w-12 md:w-[60px] lg:w-[107px] text-[10px] md:text-[14px] text-white border border-fuchsia-700 bg-fuchsia-700 font-semibold" onClick={()=>copyShorterLink(item.random)}>Copy</button>
-                        <button className="h-5 md:h-8 rounded-md w-12 md:w-[60px] lg:w-[107px] text-[10px] md:text-[14px] text-white border border-red-600 bg-red-600 font-semibold" onClick={()=>{window.location.href="/shorter/" +item.random}}>Open</button>
-                        <button className="h-5 md:h-8 rounded-md w-12 md:w-[60px] lg:w-[107px] text-[10px] md:text-[14px] text-white border border-lime-600 bg-lime-600 font-semibold" onClick={()=>handleQRCode(index)}>QR Code</button>  
-                        <button className="h-5 md:h-8 rounded-md w-12 md:w-[60px] lg:w-[107px] text-[10px] md:text-[14px] text-white border border-teal-600 bg-teal-600 font-semibold" onClick={()=>handleShare(index)}>Share</button>
+                        <button className="h-5 leading-3 md:h-8 rounded-md w-12 md:w-[60px] lg:w-[107px] text-[10px] md:text-[14px] text-white border border-fuchsia-700 bg-fuchsia-700 font-semibold" onClick={()=>copyShorterLink(item.random)}>Copy</button>
+                        <button className="h-5 leading-3 md:h-8 rounded-md w-12 md:w-[60px] lg:w-[107px] text-[10px] md:text-[14px] text-white border border-red-600 bg-red-600 font-semibold" onClick={()=>{window.location.href="/shorter/" +item.random}}>Open</button>
+                        <button className="h-5 leading-3 md:h-8 rounded-md w-12 md:w-[60px] lg:w-[107px] text-[10px] md:text-[14px] text-white border border-lime-600 bg-lime-600 font-semibold" onClick={()=>handleQRCode(index)}>QR Code</button>  
+                        <button className="h-5 leading-3 md:h-8 rounded-md w-12 md:w-[60px] lg:w-[107px] text-[10px] md:text-[14px] text-white border border-teal-600 bg-teal-600 font-semibold" onClick={()=>handleShare(index)}>Share</button>
                         <div id={`shareBtn${index}`} className="hidden w-2/4 md:w-[30%] lg:w-[34.8%] mt-12 md:mt-[34px] flex flex-row flex-wrap absolute left-40 md:left-[72%] lg:left-[65%] h-auto p-1.5 border border-stone-700 bg-stone-700 text-white rounded-md">
                           <FacebookShareButton className="flex flex-row gap-1 m-1 " url={`${frontendUrl}/shorter/`+item.random}>
                           <FacebookIcon id="face" size={32} round={true}/>
