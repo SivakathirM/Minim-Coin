@@ -200,8 +200,8 @@ const EditDelete = () => {
                     <td>{item.coin}</td>
                     <td>
                       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-1 md:mx-1 shareMainBtn">  
-                        <button className="h-5 md:h-8 rounded-md w-full text-[12px] md:text-[14px] text-white border border-fuchsia-700 bg-fuchsia-700 mb-1 font-semibold" onClick={()=>handleOnEdit(item.random,item.link,item.coin)}>Edit</button>
-                        <button className="h-5 md:h-8 rounded-md w-full text-[12px] md:text-[14px] text-white border border-red-600 bg-red-600 font-semibold" onClick={()=>handleOnDelete(item.random)}>Delete</button>
+                        <button className="h-5 leading-3 md:h-8 rounded-md w-full text-[12px] md:text-[14px] text-white border border-fuchsia-700 bg-fuchsia-700 mb-1 font-semibold" onClick={()=>handleOnEdit(item.random,item.link,item.coin)}>Edit</button>
+                        <button className="h-5 leading-3 md:h-8 rounded-md w-full text-[12px] md:text-[14px] text-white border border-red-600 bg-red-600 font-semibold" onClick={()=>handleOnDelete(item.random)}>Delete</button>
                       </div>
                     </td>
                   </tr>
